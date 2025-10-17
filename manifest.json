@@ -1,57 +1,31 @@
 {
-  "id": "hayase.watch",
-  "name": "Hayase Watch",
-  "short_name": "Hayase",
-  "version": "6.4.34",
-  "description": "Plataforma de streaming de anime con sincronización, historial y soporte P2P. Disfruta tus animes favoritos con la velocidad de Hayase Watch.",
-  "start_url": "https://hayase.watch/",
-  "scope": "/",
-  "display": "standalone",
-  "background_color": "#0a0a0a",
-  "theme_color": "#1e90ff",
-  "orientation": "landscape",
-  "categories": ["entertainment", "anime", "video", "pwa"],
-  "icons": [
-    {
-      "src": "https://hayase.watch/icon-192.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "https://hayase.watch/icon-512.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    }
-  ],
-  "protocol_handlers": [
-    {
-      "protocol": "hayase",
-      "url": "https://hayase.watch/?play=%s"
-    }
-  ],
-  "related_applications": [
-    {
-      "platform": "play",
-      "url": "https://play.google.com/store/apps/details?id=watch.hayase.app"
-    },
-    {
-      "platform": "windows",
-      "url": "https://github.com/hayase-app/ui/releases"
-    }
-  ],
-  "permissions": {
-    "notifications": true,
-    "fullscreen": true,
-    "persistent-storage": true,
-    "video-capture": true,
-    "audio-capture": false
+  "id": "com.nofearj.hayase.extension",
+  "name": "NoFearJ Anime Source",
+  "version": "1.0.0",
+  "description": "Extensión personalizada de NofearJ para ver anime en Hayase Watch con fuentes externas y subtítulos optimizados.",
+  "author": "Jerry Jiménez (NoFearJ)",
+  "url": "https://nofearj.com",
+  "icon": "https://nofearj.com/icon.png",
+  "background": {
+    "scripts": ["index.js"]
   },
-  "author": {
-    "name": "Hayase Developers",
-    "url": "https://github.com/hayase-app"
-  },
-  "homepage_url": "https://hayase.watch",
-  "repo": "https://github.com/hayase-app/ui",
+  "resources": [
+    "catalog",
+    "stream",
+    "meta"
+  ],
+  "catalogs": [
+    {
+      "id": "nofearj.anime.catalog",
+      "type": "anime",
+      "name": "NofearJ Anime Catalog",
+      "extra": [{ "name": "search" }]
+    }
+  ],
+  "types": ["anime"],
+  "language": "es",
+  "urlBase": "https://nofearj.com/hayase/",
+  "updateUrl": "https://raw.githubusercontent.com/nofearj/hayase-extension/main/manifest.json",
   "license": "GPL-3.0"
 }
 
