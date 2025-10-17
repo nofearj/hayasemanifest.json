@@ -1,0 +1,2 @@
+# hayasemanifest.json
+hayasewatch
