@@ -1,14 +1,11 @@
 {
-  "id": "com.nofearj.hayase.extension",
-  "name": "NoFearJ Anime Source",
+  "id": "com.nofearj.nyaablue",
+  "name": "Nyaa Blue Source",
   "version": "1.0.0",
-  "description": "Extensión personalizada de NofearJ para ver anime en Hayase Watch con fuentes externas y subtítulos optimizados.",
+  "description": "Extensión Nyaa Blue para Hayase. Permite buscar y reproducir torrents de anime directamente desde Nyaa.si con soporte de subtítulos y calidad HD.",
   "author": "Jerry Jiménez (NoFearJ)",
   "url": "https://nofearj.com",
   "icon": "https://nofearj.com/icon.png",
-  "background": {
-    "scripts": ["index.js"]
-  },
   "resources": [
     "catalog",
     "stream",
@@ -16,16 +13,18 @@
   ],
   "catalogs": [
     {
-      "id": "nofearj.anime.catalog",
+      "id": "nyaablue.catalog",
       "type": "anime",
-      "name": "NofearJ Anime Catalog",
+      "name": "Nyaa Blue Catalog",
       "extra": [{ "name": "search" }]
     }
   ],
   "types": ["anime"],
   "language": "es",
-  "urlBase": "https://nofearj.com/hayase/",
-  "updateUrl": "https://raw.githubusercontent.com/nofearj/hayase-extension/main/manifest.json",
+  "background": {
+    "scripts": ["nyaablue.user.js"]
+  },
+  "urlBase": "https://nofearj.com/hayase/nyaablue/",
+  "updateUrl": "https://raw.githubusercontent.com/nofearj/hayase-nyaablue/main/manifest.json",
   "license": "GPL-3.0"
 }
-
